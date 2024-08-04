@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Singh - Data Scientist Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Default Light Mode */
+        body {
+            background-color: #f0f0f0;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #000000;
+            color: #f7fafc;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Aditya Singh</h1>
+            <nav>
+                <a href="#home" class="mr-4">Home</a>
+                <a href="#about" class="mr-4">About</a>
+                <a href="#projects" class="mr-4">Projects</a>
+                <a href="#certifications" class="mr-4">Certificates</a>
+                <a href="#experience" class="mr-4">Experience</a>
+                <a href="#contact" class="mr-4">Contact</a>
+                <button id="theme-toggle" class="bg-blue-500 text-white py-1 px-3 rounded">Dark/Light</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero bg-black-200 py-10 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold mb-4 hero-heading">Data Scientist & Machine Learning Enthusiast</h2>
+            <p class="text-xl text-gray-700 mb-4 hero-subheading">Passionate about leveraging data to drive business solutions.</p>
+            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_XZEXB8.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+            <img src="images/12-unscreen.gif" alt="Aditya Singh" class="w-100 h-100 mt-1">
+        </section>
+    <!-- About Section -->
+    <section id="about" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/3 p-4">
+                <img src="images/my.jpg" alt="Aditya Singh" class="rounded-full w-full h-auto object-cover shadow-lg transition-transform transform hover:scale-105 animate__animated animate__fadeIn">
+            </div>
+            <div class="w-full md:w-2/3 p-4">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn">About Me</h2>
+                <p class="text-gray-600">I am a passionate data scientist with a strong foundation in machine learning, artificial intelligence, and data analytics. Currently pursuing a Bachelor of Technology in Artificial Intelligence and Machine Learning from Sanjay Ghodawat University, I have hands-on experience in developing and deploying machine learning models for real-world applications. As a Microsoft Learn Student Ambassador, I have conducted workshops and guided peers in learning Microsoft technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Resume</h2>
+        <p class="text-gray-600 mb-4">You can download my resume using the link below:</p>
+        <a href="images/Aditya_Singh_Resume.pdf" download class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Download Resume</a>
+    </section>
+
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            // Save the current theme in localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // On page load, set the theme based on localStorage
+        window.addEventListener('load', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+
+   <!-- Projects Section -->
+<section id="projects" class="container mx-auto my-10 p-6 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+    <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="project-card hover:scale-105 transition duration-500 ease-in-out dark:bg-gray-700 dark:text-gray-200">
+            <img src="images/encryption.jpg.png" alt="Project 1" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Advance Data Encryption Decryption Python GUI Software</h3>
+                <p class="text-gray-600 dark:text-gray-300">Developed advanced Python GUI software for data encryption and decryption. Implemented robust cryptographic algorithms ensuring high data security. Created a user-friendly interface facilitating ease of use for non-technical users.</p>
+            </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card hover:scale-105 transition duration-500 ease-in-out dark:bg-gray-700 dark:text-gray-200">
+            <img src="images/working.jpg.jpg" alt="Project 2" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Classroom Integrity Monitoring System</h3>
+                <p class="text-gray-600 dark:text-gray-300">Spearheaded the development of a Classroom Integrity Monitoring System utilizing machine learning and computer vision. Designed to detect and prevent cheating behaviors in exam halls. Employed advanced algorithms for real-time monitoring and alerting.</p>
+            </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card hover:scale-105 transition duration-500 ease-in-out dark:bg-gray-700 dark:text-gray-200">
+            <img src="images/sale.jpg.png" alt="Project 3" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Sales Prediction Model</h3>
+                <p class="text-gray-600 dark:text-gray-300">Built a machine learning model to predict sales using Python libraries such as scikit-learn and pandas. Provided actionable insights for business growth and strategy. Improved the accuracy of sales forecasts, aiding in inventory and resource management.</p>
+            </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="project-card hover:scale-105 transition duration-500 ease-in-out dark:bg-gray-700 dark:text-gray-200">
+            <img src="images/carprice.jpg.png" alt="Project 4" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Iris Flower Classification</h3>
+                <p class="text-gray-600 dark:text-gray-300">Utilized various machine learning algorithms to classify iris flower species based on petal and sepal dimensions. Employed data visualization techniques to explore and present the dataset. Achieved high classification accuracy, demonstrating the effectiveness of the model.</p>
+            </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="project-card hover:scale-105 transition duration-500 ease-in-out dark:bg-gray-700 dark:text-gray-200">
+            <img src="images/unemployment.jpg.png" alt="Project 5" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Unemployment Analysis with Python</h3>
+                <p class="text-gray-600 dark:text-gray-300">Conducted a comprehensive analysis of unemployment data using Python. Visualized trends and patterns in unemployment rates over time. Identified key factors contributing to unemployment and provided actionable insights.</p>
+            </div>
+        </div>
+        <!-- Project 6 -->
+        <div class="project-card hover:scale-105 transition duration-500 ease-in-out dark:bg-gray-700 dark:text-gray-200">
+            <img src="images/carprice.jpg.png" alt="Project 6" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Car Price Prediction with Machine Learning</h3>
+                <p class="text-gray-600 dark:text-gray-300">Developed a machine learning model to predict car prices based on various features. Utilized regression techniques and feature engineering to improve model performance. Provided a user-friendly interface for predicting car prices based on input parameters.</p>
+            </div>
+        </div>
+        <!-- Project 7 -->
+        <div class="project-card hover:scale-105 transition duration-500 ease-in-out dark:bg-gray-700 dark:text-gray-200">
+            <img src="images/email.jpg.png" alt="Project 7" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-4">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">Email Spam Detection with Machine Learning</h3>
+                <p class="text-gray-600 dark:text-gray-300">Created a machine learning model to classify emails as spam or non-spam. Employed natural language processing techniques to preprocess email data. Achieved high accuracy in spam detection, improving email filtering efficiency.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Work Experience Section -->
+<section id="experience" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Work Experience</h2>
+    <div class="space-y-4">
+        <!-- Microsoft Learn Student Ambassador -->
+        <div class="flex flex-col md:flex-row items-center animate-fadeInUp">
+            <img src="images/Microsoft_logo.svg.png" alt="Microsoft" class="w-full md:w-1/4 object-cover rounded-lg shadow-md mb-4 md:mb-0 md:mr-6">
+            <div class="w-full md:w-3/4">
+                <h3 class="text-2xl font-bold text-gray-800">Microsoft Learn Student Ambassador</h3>
+                <p class="text-gray-600">Jul 2024-Present</p>
+                <p class="text-gray-600">Organized and led workshops and webinars to educate peers on Microsoft Azure and Power Platform. Provided mentorship and technical support to students, fostering a collaborative learning environment.</p>
+                <p class="text-gray-600">Developed and shared educational content, including tutorials and blogs, to promote tech literacy. Coordinated events and hackathons, enhancing community engagement and networking opportunities.</p>
+                <p class="text-gray-600">Achieved Microsoft certifications, demonstrating proficiency in Microsoft technologies and tools.</p>
+                <button onclick="openSlideshow('microsoft-slideshow')" class="btn-primary" style="background-color: #0000ff; color: #ffffff; padding: 15px 30px; border-radius: 25px; border: none; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">View Documents</button>
+                <button onclick="viewDocument('images/microsoft-certificate.jpg')" class="btn-secondary flex items-center">
+                    <img src="images/click.gif" alt="Certificate Icon" class="w-4 h-4 mr-2"> Click Here
+                </button>
+                <div id="microsoft-slideshow" class="modal hidden">
+                    <div class="modal-content slideshow">
+                        <span onclick="closeSlideshow('microsoft-slideshow')" class="close-button">CLOSE</span>
+                        <div class="slideshow-container">
+                            <div class="slide"><img src="Certificate image/MLSA.png" alt="Microsoft Offer Letter"></div>
+                            <div class="slide"><img src="Certificate image/MLSA2.png" alt="Microsoft Certificate"></div>
+                            <!-- Add more slides if needed -->
+                        </div>
+                        <a class="prev" onclick="changeSlide('microsoft-slideshow', -1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide('microsoft-slideshow', 1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cosmic365.Al -->
+        <div class="flex flex-col md:flex-row items-center animate-fadeInUp">
+            <img src="images/cosmic365logo.jpeg" alt="Cosmic365.Al" class="w-full md:w-1/4 object-cover rounded-lg shadow-md mb-4 md:mb-0 md:mr-6">
+            <div class="w-full md:w-3/4">
+                <h3 class="text-2xl font-bold text-gray-800">Cosmic365.Al: Internship</h3>
+                <p class="text-gray-600">Mar 2024-Jul 2024</p>
+                <p class="text-gray-600">Completed a 5-month internship specializing in content creation, logo design, and AI projects.</p>
+                <p class="text-gray-600">Created engaging content and marketing materials, contributing to brand identity and market visibility. Worked on AI projects involving data analysis, model training, and deployment, gaining practical experience in artificial intelligence technologies.</p>
+                <p class="text-gray-600">Recognized with a $600 scholarship for outstanding performance and innovative contributions to internship projects.</p>
+                <button onclick="openSlideshow('cosmic365-slideshow')" class="btn-primary" style="background-color: #0000ff; color: #ffffff; padding: 15px 30px; border-radius: 25px; border: none; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">View Documents</button>
+                <button onclick="viewDocument('images/cosmic365-certificate.jpg')" class="btn-secondary flex items-center">
+                    <span>
+                        <img src="images/click.gif" alt="Certificate Icon" class="w-4 h-4 mr-2"> Click Here
+                    </span>
+                </button>
+                <div id="cosmic365-slideshow" class="modal hidden">
+                    <div class="modal-content slideshow">
+                        <span onclick="closeSlideshow('cosmic365-slideshow')" class="close-button">CLOSE</span>
+                        <div class="slideshow-container">
+                            <div class="slide"><img src="Certificate image/co-offerletter-1.png" alt="Scholarship Certificate 1"></div>
+                            <div class="slide"><img src="Certificate image/co-offerletter-2.png" alt="Scholarship Certificate 2"></div>
+                            <div class="slide"><img src="Certificate image/co-offerletter-3.png" alt="Scholarship Certificate 3"></div>
+                            <div class="slide"><img src="Certificate image/c0-Scholarship.png" alt="Scholarship Certificate 4"></div>
+                            <div class="slide"><img src="Certificate image/co-1.png" alt="Scholarship Certificate 5"></div>
+                            <div class="slide"><img src="Certificate image/co-2.png" alt="Scholarship Certificate 6"></div>
+                            <div class="slide"><img src="Certificate image/co-3.png" alt="Scholarship Certificate 7"></div>
+                            <div class="slide"><img src="Certificate image/co-4.png" alt="Scholarship Certificate 8"></div>
+                            <!-- Add more slides if needed -->
+                        </div>
+                        <a class="prev" onclick="changeSlide('cosmic365-slideshow', -1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide('cosmic365-slideshow', 1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CodSoft -->
+        <div class="flex flex-col md:flex-row items-center animate-fadeInUp">
+            <img src="images/codesoftlogo.png" alt="CodSoft" class="w-full md:w-1/4 object-cover rounded-lg shadow-md mb-4 md:mb-0 md:mr-6">
+            <div class="w-full md:w-3/4">
+                <h3 class="text-2xl font-bold text-gray-800">CodSoft: Internship (Web Development)</h3>
+                <p class="text-gray-600">Jun 2024-Jul 2024</p>
+                <p class="text-gray-600">Completed a 4-week internship focused on web development.</p>
+                <p class="text-gray-600">Developed responsive websites using HTML, CSS, JavaScript, and Bootstrap, enhancing front-end development skills. Collaborated with a team to implement website features and optimize performance for improved user experience.</p>
+                <button onclick="openSlideshow('codsoft-slideshow')" class="btn-primary" style="background-color: #0000ff; color: #ffffff; padding: 15px 30px; border-radius: 25px; border: none; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">View Documents</button>
+                <button onclick="viewDocument('images/codsoft-certificate.jpg')" class="btn-secondary flex items-center">
+                    <span>
+                        <img src="images/click.gif" alt="Certificate Icon" class="w-4 h-4 mr-2"> Click Here
+                    </span>
+                </button>
+                <div id="codsoft-slideshow" class="modal hidden">
+                    <div class="modal-content slideshow">
+                        <span onclick="closeSlideshow('codsoft-slideshow')" class="close-button">CLOSE</span>
+                        <div class="slideshow-container">
+                            <div class="slide"><img src="Certificate image/codesoft-offer.png" alt="CodSoft Certificate 1"></div>
+                            <div class="slide"><img src="Certificate image/codesoft.png" alt="CodSoft Certificate 2"></div>
+                            <!-- Add more slides if needed -->
+                        </div>
+                        <a class="prev" onclick="changeSlide('codsoft-slideshow', -1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide('codsoft-slideshow', 1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function openSlideshow(slideshowId) {
+    document.getElementById(slideshowId).classList.remove('hidden');
+}
+
+function closeSlideshow(slideshowId) {
+    document.getElementById(slideshowId).classList.add('hidden');
+}
+
+function changeSlide(slideshowId, n) {
+    var slides = document.querySelectorAll('#' + slideshowId + ' .slide');
+    var currentIndex = Array.from(slides).findIndex(slide => !slide.classList.contains('hidden'));
+    slides[currentIndex].classList.add('hidden');
+    var newIndex = (currentIndex + n + slides.length) % slides.length;
+    slides[newIndex].classList.remove('hidden');
+}
+
+function viewDocument(imgSrc) {
+    var win = window.open();
+    win.document.write('<img src="' + imgSrc + '" style="width:100%"/>');
+}
+</script>
+
+
+   <!-- Education Section -->
+<section id="education" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Education</h2>
+    <div class="space-y-4">
+        <div>
+            <h3 class="text-2xl font-bold text-gray-800">Bachelor of Technology in Artificial Intelligence and Machine Learning</h3>
+            <p class="text-gray-600">Sanjay Ghodawat University, Kolhapur, Maharashtra (Graduation: Aug 2022-Aug 2026)</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Certifications</h2>
+        <div id="certifications-carousel" class="relative">
+            <!-- Certification Thumbnails -->
+            <div class="flex overflow-x-auto space-x-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+                <!-- Certification 1 -->
+                <div class="relative cursor-pointer" onclick="openModal('cert1')">
+                    <img src="images/Microsoft_logo.svg.png" alt="Azure Data Scientist Associate" class="w-40 h-40 object-cover rounded-lg shadow-md">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <button class="bg-black text-white px-4 py-2 rounded">View</button>
+                    </div>
+                    <p class="text-center mt-2 text-black font-bold">Azure Data Scientist Associate</p>
+                </div>
+                <!-- Certification 2 -->
+                <div class="relative cursor-pointer" onclick="openModal('cert2')">
+                    <img src="images/udemy2.0.png" alt="Python and Django Framework" class="w-40 h-40 object-cover rounded-lg shadow-md">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <button class="bg-black text-white px-4 py-2 rounded">View</button>
+                    </div>
+                    <p class="text-center mt-2 text-black font-bold">Python and Django Framework</p>
+                </div>
+                <!-- Certification 3 -->
+                <div class="relative cursor-pointer" onclick="openModal('cert3')">
+                    <img src="images/coursera1.png" alt="Python for Data Science" class="w-40 h-40 object-cover rounded-lg shadow-md">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <button class="bg-black text-white px-4 py-2 rounded">View</button>
+                    </div>
+                    <p class="text-center mt-2 text-black font-bold">Python for Data Science</p>
+                </div>
+                <!-- Certification 4 -->
+                <div class="relative cursor-pointer" onclick="openModal('cert4')">
+                    <img src="images/udemy2.0.png" alt="Java Course" class="w-40 h-40 object-cover rounded-lg shadow-md">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <button class="bg-black text-white px-4 py-2 rounded">View</button>
+                    </div>
+                    <p class="text-center mt-2 text-black font-bold">Java Course</p>
+                </div>
+                <!-- Certification 5 -->
+                <div class="relative cursor-pointer" onclick="openModal('cert5')">
+                    <img src="images/infosyses.jpg" alt="Cloud Computing from Infosys" class="w-40 h-40 object-cover rounded-lg shadow-md">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <button class="bg-black text-white px-4 py-2 rounded">View</button>
+                    </div>
+                    <p class="text-center mt-2 text-black font-bold">Cloud Computing</p>
+                </div>
+                <!-- Certification 6 -->
+                <div class="relative cursor-pointer" onclick="openModal('cert6')">
+                    <img src="images/infosyses.jpg" alt="Prompt Engineering from Infosys" class="w-40 h-40 object-cover rounded-lg shadow-md">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <button class="bg-black text-white px-4 py-2 rounded">View</button>
+                    </div>
+                    <p class="text-center mt-2 text-black font-bold">Prompt Engineering</p>
+                </div>
+                <!-- Certification 7 -->
+                <div class="relative cursor-pointer" onclick="openModal('cert7')">
+                    <img src="images/infosyses.jpg" alt="Data Analysis from Infosys" class="w-40 h-40 object-cover rounded-lg shadow-md">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <button class="bg-black text-white px-4 py-2 rounded">View</button>
+                    </div>
+                    <p class="text-center mt-2 text-black font-bold">Data Analysis</p>
+                </div>
+            </div>
+        </div>
+<!-- Modals -->
+<!-- Certification 1 Modal -->
+<div id="modal-cert1" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+    <div class="relative bg-white p-6 rounded shadow-md w-96">
+        <button class="absolute top-4 right-4 text-black" onclick="closeModal('cert1')">&times;</button>
+        <img src="images/Microsoft.png" alt="Azure Data Scientist Associate" class="w-full h-auto">
+        <h3 class="text-xl font-bold mb-2">Azure Data Scientist Associate</h3>
+        <p class="black-text">Issuer: Microsoft</p>
+        <p class="black-text">Issue Date: June 9, 2024</p>
+        <p class="black-text">Credential ID: 462C88D148C3BC2</p>
+        <p class="black-text">Certification Number: F37EY2-6502A2</p>
+    </div>
+</div>
+<!-- Certification 2 Modal -->
+<div id="modal-cert2" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+    <div class="relative bg-white p-6 rounded shadow-md w-96">
+        <button class="absolute top-4 right-4 text-black" onclick="closeModal('cert2')">&times;</button>
+        <img src="images/Django.jpg" alt="Python and Django Framework" class="w-full h-auto">
+        <h3 class="text-xl font-bold mb-2">Python and Django Framework</h3>
+        <p class="black-text">Issuer: Udemy</p>
+        <p class="black-text">Issue Date: May 11, 2024</p>
+        <p class="black-text">Certification Number: UC-eOOf4abd-0092-4e22-9291-b1adf32c4aa0</p>
+    </div>
+</div>
+<!-- Certification 3 Modal -->
+<div id="modal-cert3" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+    <div class="relative bg-white p-6 rounded shadow-md w-96">
+        <button class="absolute top-4 right-4 text-black" onclick="closeModal('cert3')">&times;</button>
+        <img src="images/coursera.jpg" alt="Python for Data Science" class="w-full h-auto">
+        <h3 class="text-xl font-bold mb-2">Python for Data Science</h3>
+        <p class="black-text">Issuer: IBM</p>
+        <p class="black-text">Issue Date: September 18, 2023</p>
+        <p class="black-text">Credential ID:HF72S7X7LBSH</p>
+    </div>
+</div>
+<!-- Certification 4 Modal -->
+<div id="modal-cert4" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+    <div class="relative bg-white p-6 rounded shadow-md w-96">
+        <button class="absolute top-4 right-4 text-black" onclick="closeModal('cert4')">&times;</button>
+        <img src="images/java.png" alt="Java Course" class="w-full h-auto">
+        <h3 class="text-xl font-bold mb-2">Java Course</h3>
+        <p class="black-text">Issuer: Udemy</p>
+        <p class="black-text">Issue Date: March 14, 2024</p>
+        <p class="black-text">Credential ID: 1122334455</p>
+        <p class="black-text">Certification Number: UC-9a3fdc3f-3518-41ca-bb48-6769bbe88085</p>
+    </div>
+</div>
+<!-- Certification 5 Modal -->
+<div id="modal-cert5" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+    <div class="relative bg-white p-6 rounded shadow-md w-96">
+        <button class="absolute top-4 right-4 text-black" onclick="closeModal('cert5')">&times;</button>
+        <img src="images/cloud.png" alt="Cloud Computing" class="w-full h-auto">
+        <h3 class="text-xl font-bold mb-2">Cloud Computing</h3>
+        <p class="black-text">Issuer: Infosys</p>
+        <p class="black-text">Issue Date: March 17, 2024</p>
+        
+    </div>
+</div>
+<!-- Certification 6 Modal -->
+<div id="modal-cert6" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+    <div class="relative bg-white p-6 rounded shadow-md w-96">
+        <button class="absolute top-4 right-4 text-black" onclick="closeModal('cert6')">&times;</button>
+        <img src="images/prompt engineerning.png" alt="Prompt Engineering" class="w-full h-auto">
+        <h3 class="text-xl font-bold mb-2">Prompt Engineering</h3>
+        <p class="black-text">Issuer: Infosys</p>
+        <p class="black-text">Issue Date: September 19, 2023</p>
+        
+    </div>
+</div>
+<!-- Certification 7 Modal -->
+<div id="modal-cert7" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+    <div class="relative bg-white p-6 rounded shadow-md w-96">
+        <button class="absolute top-4 right-4 text-black" onclick="closeModal('cert7')">&times;</button>
+        <img src="images/Data analysis.png" alt="Data Analysis" class="w-full h-auto">
+        <h3 class="text-xl font-bold mb-2">Data Analysis</h3>
+        <p class="black-text">Issuer: Infosys</p>
+        <p class="black-text">Issue Date: March 20, 2024</p>
+       
+    </div>
+</div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Skills</h2>
+        <ul class="list-disc list-inside space-y-2 text-gray-800">
+            <li><strong>Programming Languages:</strong> Python, C, JavaScript, SQL ,C++</li>
+            <li><strong>Frameworks:</strong> Django, Flask, React, Angular</li>
+            <li><strong>Tools & Technologies:</strong> Git, Docker, Kubernetes, AWS</li>
+            <li><strong>Data Analysis:</strong> pandas, NumPy, scikit-learn, Matplotlib</li>
+            <li><strong>Machine Learning:</strong> Supervised Learning, Unsupervised Learning, Neural Networks</li>
+            <li><strong>Web Development:</strong> HTML, CSS, Bootstrap, Tailwind CSS</li>
+            <li><strong>Soft Skills:</strong> Communication, Teamwork, Problem-solving, Adaptability</li>
+        </ul>
+    </section>
+
+  
+    <script>
+        function openModal(modalId) {
+            document.getElementById(`modal-${modalId}`).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(`modal-${modalId}`).classList.add('hidden');
+        }
+
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+  <!-- Additional Information Section -->
+<section id="additional-info" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Additional Information</h2>
+    <div class="space-y-4">
+        <div>
+            <h3 class="text-2xl font-bold text-gray-800">Hackathons</h3>
+            <p class="text-gray-600">Participated in HackOn Blocks 2024, submitted project on 'Advance Data Encryption Decryption Python GUI Software' under the 'Reclaim Protocol: Reclaim Protocol and ZkFetch' track. <a href="https://youtu.be/6VE74rBavOo?si=--Ghlg_ac49Z3dO_" class="text-blue-500 hover:underline">YouTube Project Link</a></p>
+        </div>
+        <div>
+            <h3 class="text-2xl font-bold text-gray-800">Awards</h3>
+            <p class="text-gray-600">Received exclusive swag for participation in Devfolio HackOnBlocks'24 hackathon.</p>
+        </div>
+        <div>
+            <h3 class="text-2xl font-bold text-gray-800">Extracurricular Activities</h3>
+            <p class="text-gray-600">Active member of the Trailblazer Community, participated in various tech meetups and coding competitions.</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Contact</h2>
+        <p class="text-gray-600"><strong>Email:</strong> singaditya934@gmail.com</p>
+        <p class="text-gray-600"><strong>Mobile:</strong> 8252888953</p>
+        <p class="text-gray-600"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aditya-singh-05204b266" class="text-blue-500 hover:underline">linkedin.com/in/aditya-singh-05204b266</a></p>
+        <p class="text-gray-600"><strong>GitHub:</strong> <a href="https://github.com/Aditya2344s" class="text-blue-500 hover:underline">github.com/Aditya2344s</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Aditya Singh. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

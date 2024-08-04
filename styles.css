@@ -1,0 +1,257 @@
+/* Base Styles */
+:root {
+    --background-color-light: #ffffff; /* Light mode background */
+    --text-color-light: #000000; /* Light mode text color */
+    --background-color-dark: #000000; /* Dark mode background */
+    --text-color-dark: #080808; /* Dark mode text color */
+    --button-background-light: #df1818; /* Light mode close button background */
+    --button-background-dark: #ff4c4c; /* Dark mode close button background */
+    --button-text-light: #000000; /* Light mode button text color */
+    --button-text-dark: #000000; /* Dark mode button text color */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .close-button,
+body.dark-mode .prev,
+body.dark-mode .next {
+    background-color: var(--button-background-dark);
+    color: var(--button-text-dark);
+}
+
+/* Light Mode Styles */
+body:not(.dark-mode) {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+body:not(.dark-mode) .close-button,
+body:not(.dark-mode) .prev,
+body:not(.dark-mode) .next {
+    background-color: var(--button-background-light);
+    color: var(--button-text-light);
+}
+
+/* Close Button Styles */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--button-background-light); /* Default to light mode color */
+    color: var(--button-text-light); /* Default to light mode text color */
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 101; /* Ensure it is on top */
+}
+
+/* Button with Image */
+.button-with-image {
+    position: relative;
+    display: inline-block;
+}
+
+.button-with-image img {
+    border: 2px solid #000; /* Border around the image */
+    border-radius: 5px;
+}
+
+.button-with-image .view-document-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #0000ff; /* Blue background */
+    color: #ffffff; /* White text color */
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 102; /* Ensure it is on top of the image */
+    transition: all 0.3s ease;
+}
+
+.button-with-image .view-document-button:hover {
+    background-color: #0000cc; /* Darker blue on hover */
+}
+
+.button-with-image .view-document-button:active {
+    background-color: #000099; /* Even darker blue on active */
+}
+
+.button-with-image .view-document-button.dull {
+    opacity: 0.7; /* Dull effect */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Default to light mode color */
+    z-index: 102; /* Ensure it is on top */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navigation {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: linear-gradient(155deg, #00fffc, #eee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px auto; /* Center the navigation horizontally */
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-32px);
+}
+
+.navigation ul li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    list-style: none;
+    z-index: 1;
+}
+
+.navigation .indicator {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(155deg, #eee, #00fffc);
+    border: 6px solid #06021b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #eeecec;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 101; /* Ensure it is on top */
+}
+
+.dark-mode-toggle:hover {
+    background-color: #030303;
+}
+
+/* Page Styles */
+#page,
+#page1,
+#page2,
+#page3,
+.about-section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Navigation Button Styles */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 100; /* Ensure it is on top */
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+/* Black Text Class */
+.black-text {
+    color: black;
+}
